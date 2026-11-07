@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manav Roy · Sales Strategy & Builder</title>
+<title>Manav Roy · Sales Strategy, Revenue &amp; Product</title>
 <meta name="description" content="Manav Roy: sales strategy at InsuranceDekho. I turn messy sales data into tools and plans that teams use every day.">
 <meta property="og:title" content="Manav Roy · Sales Strategy & Builder">
 <meta property="og:description" content="Sales strategy, partner growth and the tools I build to solve real problems.">
@@ -154,7 +154,7 @@ section{padding:88px 0}
 .tl-item p{color:var(--muted);font-size:15px;max-width:720px}
 
 /* beyond */
-.beyond{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.beyond{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}
 @media (max-width:860px){.beyond{grid-template-columns:1fr}}
 .beyond-photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:320px}
 .beyond-photo img{width:100%;height:100%;object-fit:cover}
@@ -205,6 +205,52 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
 .lt.sa{background:color-mix(in srgb,var(--warm) 14%,transparent);color:var(--warm)}
 .xp-item p{color:var(--muted);font-size:14.5px}
 .xp-item p em{font-style:normal;color:var(--text);font-weight:600}
+
+.hero h1{font-size:clamp(34px,4.6vw,56px)}
+.opento{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:24px}
+.opento-l{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.role{font-size:13px;font-weight:600;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface)}
+.profile{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.profile-img{aspect-ratio:4/3;overflow:hidden;background:var(--surface-2)}
+.profile-img img{width:100%;height:100%;object-fit:cover;object-position:78% 40%}
+.facts{padding:6px 20px 12px}
+.facts div{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.facts div:last-child{border-bottom:0}
+.facts dt{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.facts dd{font-weight:600}
+.chapters{position:relative;display:grid;gap:22px}
+.chapter{display:grid;grid-template-columns:72px 1fr;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+@media (max-width:600px){.chapter{grid-template-columns:1fr;gap:6px;padding:20px}}
+.ch-n{font-family:Fraunces,Georgia,serif;font-size:44px;font-weight:700;color:var(--accent);line-height:1}
+.ch-when{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.chapter h3{font-size:24px;margin:6px 0 10px}
+.chapter p{color:var(--muted);font-size:16px;margin-bottom:10px;max-width:780px}
+.chapter p b,.ch-list b{color:var(--text)}
+.ch-lesson{display:inline-block;margin-top:4px;font-weight:600;font-size:14.5px;color:var(--accent);background:var(--accent-soft);padding:8px 14px;border-radius:10px}
+.ch-list{list-style:none;display:grid;gap:8px;margin-top:4px;max-width:780px}
+.ch-list li{color:var(--muted);padding-left:18px;position:relative;font-size:15.5px}
+.ch-list li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+.ch-photo{margin-top:14px;border-radius:16px;overflow:hidden;max-width:560px;aspect-ratio:16/9}
+.ch-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 45%}
+.inl{color:var(--accent);font-weight:600;border-bottom:1px solid currentColor}
+.how-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:center}
+@media (max-width:860px){.how-grid{grid-template-columns:1fr}}
+.hub{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hub::before{content:"";position:absolute;inset:50% 8% auto 8%;height:2px;background:var(--line)}
+.hub::after{content:"";position:absolute;inset:8% auto 8% 50%;width:2px;background:var(--line)}
+.node{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:var(--shadow);min-height:150px}
+.node .fn{font-weight:800;font-size:15px}
+.node .what{color:var(--muted);font-size:14px;margin:6px 0 10px}
+.node .res{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:5px 10px;border-radius:8px}
+.core{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:50%;background:var(--accent);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:14px;line-height:1.2;box-shadow:0 0 0 8px var(--bg),var(--shadow)}
+.core small{font-weight:500;opacity:.85;font-size:11px;margin-top:4px}
+:root[data-theme="dark"] .core{color:#06201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .core{color:#06201d}}
+#how .core{box-shadow:0 0 0 8px var(--surface-2),var(--shadow)}
+@media (max-width:600px){.hub{grid-template-columns:1fr}.hub::before,.hub::after{display:none}.core{position:static;transform:none;width:auto;height:auto;border-radius:14px;padding:12px;order:-1;box-shadow:none}.node{min-height:0}}
+.beyond-photos{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px;min-height:320px}
+.beyond-photos img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+@media (max-width:600px){.beyond-photos{grid-template-columns:1fr 1fr;min-height:220px}}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -216,7 +262,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
   <div class="wrap">
     <a href="#top" class="logo"><span class="mk">MR</span> Manav Roy</a>
     <div class="navlinks">
-      <a href="#about">About</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#work">Projects</a><a href="#journey">Journey</a><a href="#beyond">Beyond work</a>
+      <a href="#story">Story</a><a href="#how">How I work</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#work">Projects</a><a href="#beyond">Beyond work</a>
     </div>
     <div class="navright">
       <button class="iconbtn" id="themeBtn" aria-label="Toggle theme">
@@ -233,58 +279,124 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="reveal">
-      <span class="eyebrow"><span class="dot"></span> Sales · Strategy · Product thinking</span>
-      <h1>I turn messy sales data into <em>tools and plans</em> people actually use.</h1>
-      <p class="lead">I'm Manav Roy. I run sales strategy for a 17,000-partner insurance book at InsuranceDekho. When a problem keeps coming back, I don't stop at a slide. I build the dashboard, the process or the system that fixes it, and I make sure the team adopts it.</p>
+      <span class="eyebrow"><span class="dot"></span> Sales Strategy · B2B · InsuranceDekho</span>
+      <h1>From zero sales in my first two months to running a <em>&#8377;80 Cr/month</em> portfolio.</h1>
+      <p class="lead">I'm Manav Roy, a sales strategy professional. I find out why revenue stalls, decide where and when a sales team should focus, and fix it with segmentation, incentive design and the tools the team uses every day.</p>
+      <div class="opento">
+        <span class="opento-l">Open to roles in</span>
+        <span class="role">Sales Strategy</span><span class="role">Revenue &amp; Sales Operations</span><span class="role">Product (B2B &amp; Growth)</span><span class="role">Strategy &amp; Business Growth</span>
+      </div>
       <div class="ctas">
-        <a class="btn btn-primary" href="#work">See what I've built →</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">LinkedIn profile</a>
-        <a class="btn btn-ghost" href="https://github.com/manav-roy" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn btn-ghost" href="#story">Read my story</a>
+        <a class="btn btn-ghost" href="#work">See what I've built</a>
       </div>
       <a class="mailline" href="mailto:manav.ficabsec@gmail.com">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
         manav.ficabsec@gmail.com
       </a>
     </div>
-    <div class="portrait reveal">
-      <img src="assets/solo-trek.jpg" alt="Manav Roy on a Himalayan trek, with a snow peak behind" loading="eager">
-      <div class="tag"><div><b>Manav Roy</b>PGDM, Goa Institute of Management</div><span class="badge">Gurugram</span></div>
-    </div>
+    <aside class="profile reveal">
+      <div class="profile-img"><img src="assets/gim.jpg" alt="Manav Roy at Goa Institute of Management" loading="eager"></div>
+      <dl class="facts">
+        <div><dt>Current</dt><dd>Sales Strategy (B2B), InsuranceDekho</dd></div>
+        <div><dt>Portfolio</dt><dd>17,000 partners · &#8377;80 Cr/month</dd></div>
+        <div><dt>Sales team</dt><dd>1,500+ people supported</dd></div>
+        <div><dt>Front line</dt><dd>1 year in sales, Jaro Education</dd></div>
+        <div><dt>Education</dt><dd>PGDM, Goa Institute of Management</dd></div>
+      </dl>
+    </aside>
   </div>
   <div class="wrap" style="margin-top:56px">
     <div class="stats reveal">
-      <div class="stat"><div class="n" data-count="17000" data-suffix="">0</div><div class="l">insurance partners in the book I run</div></div>
-      <div class="stat"><div class="n" data-count="80" data-prefix="₹" data-suffix=" Cr">0</div><div class="l">monthly business on that book</div></div>
+      <div class="stat"><div class="n" data-count="30000" data-suffix="+">0</div><div class="l">customers pitched in my first year of sales</div></div>
+      <div class="stat"><div class="n" data-count="1" data-prefix="&#8377;" data-suffix=" Cr">0</div><div class="l">revenue closed from about 100 deals</div></div>
+      <div class="stat"><div class="n" data-count="80" data-prefix="&#8377;" data-suffix=" Cr">0</div><div class="l">monthly business in the portfolio I run</div></div>
       <div class="stat"><div class="n" data-count="800" data-suffix="+">0</div><div class="l">salespeople use my dashboard daily</div></div>
-      <div class="stat"><div class="n" data-count="1500" data-suffix="">0</div><div class="l">people in the sales org I support</div></div>
     </div>
   </div>
 </header>
 
-<section id="about">
+<section id="story">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="kicker">About me</div>
-      <h2>A commercial mind who builds things.</h2>
+      <div class="kicker">My story</div>
+      <h2>I learnt to sell first. Then I learnt why selling works.</h2>
     </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>I started in <strong>sales</strong>, selling online MBA programmes to working professionals at Jaro Education. That year taught me that people buy when they feel understood, not when they are pitched at.</p>
-        <p>After my <strong>PGDM in Marketing &amp; Strategy</strong> at Goa Institute of Management, I joined InsuranceDekho's sales strategy team. There I took a 13,000-partner book from ₹50 Cr to ₹55 Cr a month in six months, and then took over the larger 17,000-partner, ₹80 Cr book.</p>
-        <p>Along the way I found that the biggest wins rarely come from one more report. They come from <strong>building the tool that removes the problem</strong>. So I learnt to build: dashboards, automated reports and an AI job-search system, using Claude Code, GitHub and Vercel.</p>
-      </div>
+    <div class="chapters">
+      <article class="chapter reveal">
+        <div class="ch-n">01</div>
+        <div class="ch-body">
+          <div class="ch-when">2022 &ndash; 2023 · Jaro Education</div>
+          <h3>The hard start</h3>
+          <p>My first two months in sales: zero deals, bottom of the leaderboard. Over that year I spoke to more than <b>30,000 prospects</b> and heard &ldquo;no&rdquo; from 99.5% of them.</p>
+          <p>The roughly 100 who said yes added up to <b>&#8377;1 Cr in revenue</b>, 115% of my annual target and a place among the top performers in my branch. Consistency got me there. The craft of selling and persuading is what made me want to understand sales properly.</p>
+          <div class="ch-lesson">Lesson: rejection is data. Volume plus learning beats talent.</div>
+        </div>
+      </article>
+      <article class="chapter reveal">
+        <div class="ch-n">02</div>
+        <div class="ch-body">
+          <div class="ch-when">2024 &ndash; 2026 · Goa Institute of Management</div>
+          <h3>Sharpening the edge</h3>
+          <p>To learn the strategy behind the selling, I did a <b>PGDM in Marketing &amp; Strategy</b> at Goa Institute of Management. It sat right where my interests meet: how businesses grow, and a campus surrounded by the outdoors I love.</p>
+          <p>There I was a finalist (12 of 1,200) at the IIT Roorkee case competition, a D.E. Shaw Fin Quest Fellow (1 of 14), and built a go-to-market plan for <b>Havells</b> from 410 retail outlets and 100 customer interviews.</p>
+          <figure class="ch-photo"><img src="assets/gim.jpg" alt="Manav at the Goa Institute of Management campus sign" loading="lazy"></figure>
+        </div>
+      </article>
+      <article class="chapter reveal">
+        <div class="ch-n">03</div>
+        <div class="ch-body">
+          <div class="ch-when">Apr 2026 &ndash; Present · InsuranceDekho</div>
+          <h3>Owning the number</h3>
+          <p>From selling one MBA programme at a time to the <b>central sales strategy team</b>, owning a 17,000-partner portfolio worth <b>&#8377;80 Cr a month</b>. I take full ownership of the work:</p>
+          <ul class="ch-list">
+            <li><b>Design incentive plans and contests</b> for a 1,500+ person sales team and our partners.</li>
+            <li><b>Analyse partner cohorts</b> to decide where to focus and when.</li>
+            <li><b>Solve priority partners' problems</b>: 1,000+ cases closed, 500 partners back in business.</li>
+            <li><b>Spotted that sales had no visibility</b> into partner health, and built the dashboard 800+ of them now use daily.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="chapter reveal">
+        <div class="ch-n">04</div>
+        <div class="ch-body">
+          <div class="ch-when">Always · Builder</div>
+          <h3>Building the fix, not just the slide</h3>
+          <p>When a problem keeps coming back, I build the tool that removes it, using Claude Code, GitHub and Vercel. Two of them run every day: <a href="#work" class="inl">Shikhar</a>, the sales team's partner dashboard, and <a href="#work" class="inl">Pipeline Desk</a>, my AI job-search system.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">How I work</div>
+      <h2>A structured approach, across every function.</h2>
+      <p>Sales strategy sits in the middle of the business. Working with Marketing, L&amp;D, Revenue and Operations gave me a whole view of how an organisation runs, and each partnership moved a number.</p>
+    </div>
+    <div class="how-grid">
       <div class="method reveal">
         <h3>How I solve problems</h3>
         <div class="step"><div class="i">1</div><div><b>Find the real problem</b><span>Talk to the people on the ground before touching the data.</span></div></div>
-        <div class="step"><div class="i">2</div><div><b>Size it with data</b><span>Clean it, segment it, and find where the money actually moves.</span></div></div>
-        <div class="step"><div class="i">3</div><div><b>Build the fix</b><span>A process, an incentive or a tool, whichever is simplest that works.</span></div></div>
+        <div class="step"><div class="i">2</div><div><b>Size it with data</b><span>Clean it, segment it, and find where and when the money moves.</span></div></div>
+        <div class="step"><div class="i">3</div><div><b>Build the fix</b><span>A process, an incentive or a tool, whichever is the simplest that works.</span></div></div>
         <div class="step"><div class="i">4</div><div><b>Drive adoption</b><span>Train, follow up and measure until the change sticks.</span></div></div>
+      </div>
+      <div class="hub reveal" aria-label="Cross-functional work and results">
+        <div class="node n1"><div class="fn">Marketing</div><div class="what">Campaign launches for partners and the sales team</div><div class="res">Campaigns launched with sales</div></div>
+        <div class="node n2"><div class="fn">Learning &amp; Development</div><div class="what">15 AI-assisted training modules for 1,500 sales staff</div><div class="res">+15% incentive earnings for 125 salespeople</div></div>
+        <div class="core"><span>Sales Strategy</span><small>my role</small></div>
+        <div class="node n3"><div class="fn">Revenue</div><div class="what">Partner contests and payout redesign</div><div class="res">&#8377;90L in one week · +3% MoM</div></div>
+        <div class="node n4"><div class="fn">Operations</div><div class="what">Issue routing for priority partner cohorts</div><div class="res">1,000+ cases · +&#8377;40L/month</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="lenses" style="padding-top:0">
+<section id="lenses">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="kicker">Three lenses I work with</div>
@@ -388,6 +500,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
       <div class="xp-card reveal">
         <div class="xp-head"><div><h3>Senior Business Development Associate</h3><div class="org">Jaro Education · Gurugram · online MBA programmes</div></div><div class="when">Jun 2022 – Jun 2023</div></div>
         <div class="xp-list">
+          <div class="xp-item"><div class="top"><b>Turned around a zero start</b><span class="lt sa">Sales</span></div><p>Zero sales in my first two months. Spoke to <em>30,000+ prospects</em> that year, with 99.5% saying no, and finished among the branch's top performers.</p></div>
           <div class="xp-item"><div class="top"><b>Consultative selling</b><span class="lt sa">Sales</span></div><p>Sold ₹1 lakh+ online MBA programmes to working professionals through consultative selling: <em>100+ deals worth ₹1 Cr</em>.</p></div>
           <div class="xp-item"><div class="top"><b>Set a team benchmark</b><span class="lt sa">Sales</span></div><p>Peaked at <em>23 enrolments in a month</em>, a benchmark for the team.</p></div>
           <div class="xp-item"><div class="top"><b>Made the deal affordable</b><span class="lt s">Strategy</span></div><p>Used loans from partner NBFCs to take price out of the way: <em>₹70L of my sales</em> were financed that way.</p></div>
@@ -472,21 +585,6 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
   </div>
 </section>
 
-<section id="journey" style="background:var(--surface-2)">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker">Journey so far</div>
-      <h2>From the sales floor to strategy.</h2>
-    </div>
-    <div class="tl">
-      <div class="tl-item now reveal"><div class="when">Apr 2026 – Present</div><h3>Sales Strategy · InsuranceDekho, Gurugram</h3><p>Run strategy for a 17,000-partner, ₹80 Cr/month B2B book. Built the Shikhar dashboard and automated reporting for a 1,500-person sales org, redesigned partner payouts, and own monthly reporting to 70+ state and regional sales heads.</p></div>
-      <div class="tl-item reveal"><div class="when">2024 – 2026</div><h3>PGDM, Marketing &amp; Strategy · Goa Institute of Management</h3><p>Finalist (12 of 1,200) at the IIT Roorkee case competition. D.E. Shaw Fin Quest Fellow (1 of 14). Interned at Havells, where I mapped 410 outlets, found a 63% coverage gap for BLDC fans and presented a go-to-market plan the zonal team adopted.</p></div>
-      <div class="tl-item reveal"><div class="when">2022 – 2023</div><h3>Senior Business Development Associate · Jaro Education</h3><p>Closed ₹1 Cr across 100+ deals, hit 115% of annual target and won the national "Sales Striker" award.</p></div>
-      <div class="tl-item reveal"><div class="when">2019 – 2022</div><h3>B.Com · Shaheed Bhagat Singh Evening College, University of Delhi</h3><p>President of the Student Entrepreneurship Cell: led a 40-member team through 10+ events, including a 2,000-attendee flagship.</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="beyond">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -494,7 +592,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
       <h2>The mountains taught me the rest.</h2>
     </div>
     <div class="beyond">
-      <div class="beyond-photo reveal"><img src="assets/team-trek.jpg" alt="Manav with fellow trekkers in front of Himalayan peaks" loading="lazy"></div>
+      <div class="beyond-photos reveal"><img src="assets/solo-trek.jpg" alt="Manav on a Himalayan trek" loading="lazy"><img src="assets/team-trek.jpg" alt="Manav with fellow trekkers in front of Himalayan peaks" loading="lazy"></div>
       <div class="card reveal">
         <p>I travel solo across Himachal and Uttarakhand, and I've trekked, rafted and flown in the Himalayas. Out there I'm a beginner again, often uncomfortable and dependent on strangers. It taught me that learning comes in many forms, not just textbooks, and that being willing to be vulnerable is how you get better.</p>
         <div class="trails">
