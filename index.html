@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manav Roy · Sales Strategy & Builder</title>
+<meta name="description" content="Manav Roy: sales strategy at InsuranceDekho. I turn messy sales data into tools and plans that teams use every day.">
+<meta property="og:title" content="Manav Roy · Sales Strategy & Builder">
+<meta property="og:description" content="Sales strategy, partner growth and the tools I build to solve real problems.">
+<meta property="og:image" content="assets/solo-trek.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f766e'/><text x='50%25' y='56%25' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle' dominant-baseline='middle'>MR</text></svg>">
+<style>
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --surface-2:#f0eee8; --text:#14161a; --muted:#5b616b; --line:#e3e0d8;
+  --accent:#0f766e; --accent-2:#14b8a6; --accent-soft:#e3f3f1; --warm:#c2410c; --shadow:0 1px 2px rgba(20,22,26,.04),0 8px 28px rgba(20,22,26,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1012; --surface:#151a1d; --surface-2:#1c2226; --text:#eef1f2; --muted:#9aa3a9; --line:#263035;
+    --accent:#2dd4bf; --accent-2:#5eead4; --accent-soft:#12302d; --warm:#fb923c; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1012; --surface:#151a1d; --surface-2:#1c2226; --text:#eef1f2; --muted:#9aa3a9; --line:#263035;
+  --accent:#2dd4bf; --accent-2:#5eead4; --accent-soft:#12302d; --warm:#fb923c; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
+.serif{font-family:Fraunces,Georgia,serif}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.4) blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo span.mk{width:34px;height:34px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:13px;letter-spacing:.02em}
+.navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted);font-weight:500}
+.navlinks a:hover{color:var(--text)}
+.navright{display:flex;gap:10px;align-items:center}
+.iconbtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid transparent;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn-primary{color:#06201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-primary{color:#06201d}}
+.btn-ghost{border-color:var(--line);background:var(--surface)}
+@media (max-width:860px){.navlinks{display:none}}
+
+/* hero */
+.hero{padding:88px 0 64px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero{padding:48px 0 40px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--accent) 0%,transparent)}}
+.hero h1{font-size:clamp(38px,5.6vw,64px);margin:20px 0 18px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:600px}
+.hero .ctas{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.portrait{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:var(--surface-2)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.portrait .tag{position:absolute;left:14px;bottom:14px;right:14px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);border-radius:14px;padding:12px 14px;font-size:13px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.portrait .tag b{display:block;font-size:14px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.stat .n{font-size:clamp(28px,3.4vw,38px);font-weight:800;letter-spacing:-.03em}
+.stat .l{color:var(--muted);font-size:14px;margin-top:4px}
+
+section{padding:88px 0}
+@media (max-width:600px){section{padding:56px 0}}
+.sec-head{max-width:700px;margin-bottom:40px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:12px;font-size:17px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-text p{font-size:17px;color:var(--muted);margin-bottom:16px}
+.about-text p strong{color:var(--text)}
+.method{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.method h3{font-size:18px;margin-bottom:16px}
+.step{display:flex;gap:14px;padding:12px 0;border-top:1px dashed var(--line)}
+.step:first-of-type{border-top:0}
+.step .i{flex:none;width:30px;height:30px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-weight:700;display:grid;place-items:center;font-size:13px}
+.step b{display:block;font-size:15px}
+.step span{color:var(--muted);font-size:14px}
+
+/* impact */
+.impact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+@media (max-width:860px){.impact-grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.card h3{font-size:18px}
+.card .sub{color:var(--muted);font-size:14px;margin-top:4px}
+.chart-box{position:relative;height:300px;margin-top:18px}
+.par{display:grid;gap:12px}
+.par-item{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--surface-2)}
+.par-item .t{font-weight:700;font-size:15px;display:flex;justify-content:space-between;gap:10px}
+.par-item .t .r{color:var(--accent);white-space:nowrap}
+.par-flow{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:13.5px;color:var(--muted);margin-top:8px}
+.par-flow b{color:var(--text);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+
+/* projects */
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
+@media (max-width:860px){.proj{grid-template-columns:1fr;padding:22px}}
+.proj h3{font-size:clamp(22px,2.6vw,28px);margin:8px 0 10px}
+.proj p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.chip{font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line)}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* mock UI */
+.mock{border-radius:16px;border:1px solid var(--line);background:var(--surface-2);overflow:hidden;font-size:12px}
+.mock-top{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);align-items:center}
+.mock-top i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.mock-top span{margin-left:8px;color:var(--muted);font-weight:600}
+.mock-body{display:grid;grid-template-columns:150px 1fr;min-height:260px}
+@media (max-width:500px){.mock-body{grid-template-columns:1fr}.mock-side{display:none}}
+.mock-side{border-right:1px solid var(--line);padding:10px 8px;display:flex;flex-direction:column;gap:3px}
+.mock-side div{padding:6px 8px;border-radius:7px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-side div.on{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.mock-main{padding:14px;display:grid;gap:10px;align-content:start}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px}
+.kpi .bar{height:6px;border-radius:4px;background:var(--line);margin-top:8px;overflow:hidden}
+.kpi .bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
+.kpi small{color:var(--muted)}
+.spark{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px;height:110px}
+.funnel{display:grid;gap:8px}
+.f-row{display:flex;align-items:center;gap:12px}
+.f-bar{height:38px;border-radius:10px;background:var(--accent);display:flex;align-items:center;padding:0 14px;color:#fff;font-weight:700;font-size:13.5px;white-space:nowrap;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+:root[data-theme="dark"] .f-bar{color:#06201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .f-bar{color:#06201d}}
+.f-row small{color:var(--muted);font-size:12.5px}
+
+/* timeline */
+.tl{position:relative;margin-left:8px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--line))}
+.tl-item{position:relative;padding:0 0 34px 40px}
+.tl-item::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.tl-item.now::before{background:var(--accent)}
+.tl-item .when{font-size:13px;font-weight:700;color:var(--accent)}
+.tl-item h3{font-size:19px;margin:4px 0 6px}
+.tl-item p{color:var(--muted);font-size:15px;max-width:720px}
+
+/* beyond */
+.beyond{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+@media (max-width:860px){.beyond{grid-template-columns:1fr}}
+.beyond-photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);min-height:320px}
+.beyond-photo img{width:100%;height:100%;object-fit:cover}
+.beyond .card p{color:var(--muted);font-size:16px;margin:12px 0 16px}
+.trails{display:flex;flex-wrap:wrap;gap:8px}
+.trail{font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2)}
+.trail.hl{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+
+/* contact */
+.contact{background:var(--accent);color:#fff;border-radius:28px;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+:root[data-theme="dark"] .contact{color:#06201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .contact{color:#06201d}}
+.contact h2{font-size:clamp(28px,4vw,44px)}
+.contact p{opacity:.85;margin:12px auto 26px;max-width:520px;font-size:17px}
+.contact .btn{background:#fff;color:#0f3d39}
+.contact .btn.alt{background:transparent;border-color:currentColor;color:inherit}
+@media (max-width:600px){.contact{padding:40px 20px}}
+footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="mk">MR</span> Manav Roy</a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#impact">Impact</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#beyond">Beyond work</a>
+    </div>
+    <div class="navright">
+      <button class="iconbtn" id="themeBtn" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        Connect
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span> Sales Strategy · InsuranceDekho</span>
+      <h1>I turn messy sales data into <em>tools and plans</em> people actually use.</h1>
+      <p class="lead">I'm Manav Roy. I run sales strategy for a 17,000-partner insurance book at InsuranceDekho. When a problem keeps coming back, I don't stop at a slide. I build the dashboard, the process or the system that fixes it, and I make sure the team adopts it.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#work">See what I've built →</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">LinkedIn profile</a>
+        <a class="btn btn-ghost" href="https://github.com/manav-roy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="portrait reveal">
+      <img src="assets/solo-trek.jpg" alt="Manav Roy on a Himalayan trek, with a snow peak behind" loading="eager">
+      <div class="tag"><div><b>Manav Roy</b>PGDM, Goa Institute of Management</div><span class="badge">Gurugram</span></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:56px">
+    <div class="stats reveal">
+      <div class="stat"><div class="n" data-count="17000" data-suffix="">0</div><div class="l">insurance partners in the book I run</div></div>
+      <div class="stat"><div class="n" data-count="80" data-prefix="₹" data-suffix=" Cr">0</div><div class="l">monthly business on that book</div></div>
+      <div class="stat"><div class="n" data-count="800" data-suffix="+">0</div><div class="l">salespeople use my dashboard daily</div></div>
+      <div class="stat"><div class="n" data-count="1500" data-suffix="">0</div><div class="l">people in the sales org I support</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">About me</div>
+      <h2>A commercial mind who builds things.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I started in <strong>sales</strong>, selling online MBA programmes to working professionals at Jaro Education. That year taught me that people buy when they feel understood, not when they are pitched at.</p>
+        <p>After my <strong>PGDM in Marketing &amp; Strategy</strong> at Goa Institute of Management, I joined InsuranceDekho's sales strategy team. There I took a 13,000-partner book from ₹50 Cr to ₹55 Cr a month in six months, and then took over the larger 17,000-partner, ₹80 Cr book.</p>
+        <p>Along the way I found that the biggest wins rarely come from one more report. They come from <strong>building the tool that removes the problem</strong>. So I learnt to build: dashboards, automated reports and an AI job-search system, using Claude Code, GitHub and Vercel.</p>
+      </div>
+      <div class="method reveal">
+        <h3>How I solve problems</h3>
+        <div class="step"><div class="i">1</div><div><b>Find the real problem</b><span>Talk to the people on the ground before touching the data.</span></div></div>
+        <div class="step"><div class="i">2</div><div><b>Size it with data</b><span>Clean it, segment it, and find where the money actually moves.</span></div></div>
+        <div class="step"><div class="i">3</div><div><b>Build the fix</b><span>A process, an incentive or a tool, whichever is simplest that works.</span></div></div>
+        <div class="step"><div class="i">4</div><div><b>Drive adoption</b><span>Train, follow up and measure until the change sticks.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Impact</div>
+      <h2>Problem → action → result.</h2>
+      <p>A few things I've shipped at InsuranceDekho since April 2026.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="card reveal">
+        <h3>Book growth: ₹50 Cr → ₹55 Cr a month in six months</h3>
+        <div class="sub">Monthly business on my portfolio, ₹ crore. Then handed the larger, 17,000-partner book.</div>
+        <div class="chart-box"><canvas id="bookChart" aria-label="Monthly business on my portfolio grew from 50 to 55 crore rupees, then the larger book at 80 crore" role="img"></canvas></div>
+      </div>
+      <div class="par reveal">
+        <div class="par-item">
+          <div class="t">Partner win-back <span class="r">+₹1.2 Cr/month</span></div>
+          <div class="par-flow"><b>Problem</b><span>High-potential partners had quietly lapsed.</span><b>Action</b><span>Identified and won back 120 of them.</span><b>Result</b><span>₹1.2 Cr a month back in the book.</span></div>
+        </div>
+        <div class="par-item">
+          <div class="t">Issue resolution <span class="r">+₹40L/month</span></div>
+          <div class="par-flow"><b>Problem</b><span>500 partners stopped over unresolved issues.</span><b>Action</b><span>Built cross-functional issue routing; 1,000+ issues closed.</span><b>Result</b><span>All 500 partners revived.</span></div>
+        </div>
+        <div class="par-item">
+          <div class="t">Payout redesign <span class="r">+3% MoM</span></div>
+          <div class="par-flow"><b>Problem</b><span>Flat payouts didn't reward partners' best product lines.</span><b>Action</b><span>Restructured the grid by product line; led insurer rate talks.</span><b>Result</b><span>+3% month-on-month incremental business.</span></div>
+        </div>
+        <div class="par-item">
+          <div class="t">Revival contest <span class="r">₹90L in a week</span></div>
+          <div class="par-flow"><b>Problem</b><span>10,000 partners inactive in a month.</span><b>Action</b><span>One-week contest costing 1% against a 3% margin.</span><b>Result</b><span>₹90L of business that week.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What I've built</div>
+      <h2>Tools, not slides.</h2>
+      <p>Two systems I designed and built myself, each starting from a real problem.</p>
+    </div>
+
+    <article class="proj reveal">
+      <div>
+        <span class="badge">Live · used daily by 800+ salespeople</span>
+        <h3>Shikhar: a partner 360 dashboard</h3>
+        <p><b style="color:var(--text)">The problem:</b> 1,500 salespeople had no live view of their partners. Reporting was manual, late and different for every region.</p>
+        <p style="margin-top:10px"><b style="color:var(--text)">What it does:</b> each salesperson logs in and sees their own partner base: who is growing, who is slipping, and what to do next. Managers see their team's performance, assign tasks and run contests from one place.</p>
+        <div class="chips">
+          <span class="chip">Role-based login</span><span class="chip">Partner list &amp; 360 view</span><span class="chip">Team &amp; monthly performance</span><span class="chip">State / city analysis</span><span class="chip">Growth &amp; degrowth alerts</span><span class="chip">Bucket movement</span><span class="chip">AI recommendations</span><span class="chip">Task assignment</span><span class="chip">Contest leaderboards</span><span class="chip">Login &amp; form trackers</span><span class="chip">Excel export</span>
+        </div>
+        <p><b style="color:var(--text)">Result:</b> adopted across the sales org, used daily by 800+ salespeople and rated 4/5 by users.</p>
+        <div class="ctas" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-ghost" href="https://partner-360-dashboard.vercel.app" target="_blank" rel="noopener">View login page ↗</a>
+        </div>
+        <div class="note">Access is restricted to employees because the dashboard holds company data. The preview on the right is an illustration, not real data.</div>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="mock-top"><i></i><i></i><i></i><span>Shikhar · Overview</span></div>
+        <div class="mock-body">
+          <div class="mock-side">
+            <div class="on">Overview</div><div>Partner list</div><div>Team performance</div><div>Monthly performance</div><div>State / city analysis</div><div>AI recommendations</div><div>Tasks</div><div>Growth / degrowth</div><div>Bucket movement</div><div>Contests</div>
+          </div>
+          <div class="mock-main">
+            <div class="kpis">
+              <div class="kpi"><small>Active partners</small><div class="bar"><i style="width:72%"></i></div></div>
+              <div class="kpi"><small>Growing</small><div class="bar"><i style="width:58%"></i></div></div>
+              <div class="kpi"><small>At risk</small><div class="bar"><i style="width:24%;background:var(--warm)"></i></div></div>
+            </div>
+            <div class="spark"><canvas id="mockSpark" aria-hidden="true"></canvas></div>
+            <div class="kpis">
+              <div class="kpi"><small>Tasks open</small><div class="bar"><i style="width:40%"></i></div></div>
+              <div class="kpi"><small>Logins today</small><div class="bar"><i style="width:84%"></i></div></div>
+              <div class="kpi"><small>Forms done</small><div class="bar"><i style="width:66%"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj reveal">
+      <div>
+        <span class="badge">Personal project · Claude Code, GitHub, Vercel</span>
+        <h3>Pipeline Desk: an AI job-search system</h3>
+        <p><b style="color:var(--text)">The problem:</b> applying through one-click portals brought only rejections, and I kept finding good roles too late.</p>
+        <p style="margin-top:10px"><b style="color:var(--text)">What it does:</b> Python scouts pull fresh roles from 39 company career boards (Greenhouse, Lever, Ashby, SmartRecruiters, Workday) and job sites. Each role is scored against my profile with a 70% match gate and paired with the right CV. A scheduled cloud agent refreshes it every two hours, and Gmail sync updates application status on its own.</p>
+        <div class="chips">
+          <span class="chip">Python scrapers</span><span class="chip">ATS public APIs</span><span class="chip">Match scoring</span><span class="chip">Role-specific CVs</span><span class="chip">Gmail sync</span><span class="chip">Scheduled cloud agent</span><span class="chip">Follow-up sprint</span><span class="chip">Multi-user login</span>
+        </div>
+        <p><b style="color:var(--text)">Result:</b> it showed me that applying on company sites converts far better than portals, and changed how I search.</p>
+        <div class="note">The dashboard is private because it holds personal application data.</div>
+      </div>
+      <div class="card" style="box-shadow:none">
+        <h3 style="font-size:16px">How a role moves through the system</h3>
+        <div class="sub">Live counts, November 2026</div>
+        <div class="funnel" style="margin-top:18px">
+          <div class="f-row"><div class="f-bar" data-w="100">39 career boards + job sites</div></div>
+          <div class="f-row"><div class="f-bar" data-w="86">270+ roles found, last 30 days</div></div>
+          <div class="f-row"><div class="f-bar" data-w="62">Scored · 70% match gate</div></div>
+          <div class="f-row"><div class="f-bar" data-w="44">100+ applications tracked</div></div>
+        </div>
+        <div class="note">Bar widths show the stages, not exact proportions.</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="journey" style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Journey so far</div>
+      <h2>From the sales floor to strategy.</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-item now reveal"><div class="when">Apr 2026 – Present</div><h3>Sales Strategy · InsuranceDekho, Gurugram</h3><p>Run strategy for a 17,000-partner, ₹80 Cr/month B2B book. Built the Shikhar dashboard and automated reporting for a 1,500-person sales org, redesigned partner payouts, and own monthly reporting to 70+ state and regional sales heads.</p></div>
+      <div class="tl-item reveal"><div class="when">2024 – 2026</div><h3>PGDM, Marketing &amp; Strategy · Goa Institute of Management</h3><p>Finalist (12 of 1,200) at the IIT Roorkee case competition. D.E. Shaw Fin Quest Fellow (1 of 14). Interned at Havells, where I mapped 410 outlets, found a 63% coverage gap for BLDC fans and presented a go-to-market plan the zonal team adopted.</p></div>
+      <div class="tl-item reveal"><div class="when">2022 – 2023</div><h3>Senior Business Development Associate · Jaro Education</h3><p>Closed ₹1 Cr across 100+ deals, hit 115% of annual target and won the national "Sales Striker" award.</p></div>
+      <div class="tl-item reveal"><div class="when">2019 – 2022</div><h3>B.Com · Shaheed Bhagat Singh Evening College, University of Delhi</h3><p>President of the Student Entrepreneurship Cell: led a 40-member team through 10+ events, including a 2,000-attendee flagship.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="beyond">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Beyond work</div>
+      <h2>The mountains taught me the rest.</h2>
+    </div>
+    <div class="beyond">
+      <div class="beyond-photo reveal"><img src="assets/team-trek.jpg" alt="Manav with fellow trekkers in front of Himalayan peaks" loading="lazy"></div>
+      <div class="card reveal">
+        <p>I travel solo across Himachal and Uttarakhand, and I've trekked, rafted and flown in the Himalayas. Out there I'm a beginner again, often uncomfortable and dependent on strangers. It taught me that learning comes in many forms, not just textbooks, and that being willing to be vulnerable is how you get better.</p>
+        <div class="trails">
+          <span class="trail hl">Kuari Pass</span><span class="trail hl">Kheerganga</span><span class="trail">Triund</span><span class="trail">Tungnath</span><span class="trail">Jalori Pass</span><span class="trail">Paragliding · Bir</span><span class="trail">Rafting · Rishikesh</span><span class="trail">Solo · Himachal &amp; Uttarakhand</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Let's talk.</h2>
+      <p>I'm open to roles in strategy, product, and sales and revenue operations, where building things is part of the job.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn alt" href="mailto:manav.ficabsec@gmail.com">Email me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Manav Roy · Built with Claude Code, hosted on Vercel · <a href="https://github.com/manav-roy/portfolio" style="text-decoration:underline">Source on GitHub</a></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  document.getElementById('themeBtn').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    drawCharts();
+  });
+
+  function css(v){return getComputedStyle(root).getPropertyValue(v).trim();}
+
+  // reveal + counters + funnel
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return; e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(count);
+    e.target.querySelectorAll('.f-bar').forEach(function(b){b.style.width=b.dataset.w+'%';});
+    io.unobserve(e.target);
+  });},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){
+    el.querySelectorAll('.f-bar').forEach(function(b){b.style.width='18%';});
+    io.observe(el);
+  });
+  function count(el){
+    var to=+el.dataset.count,p=el.dataset.prefix||'',s=el.dataset.suffix||'',t0=null;
+    function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/1200,1);k=1-Math.pow(1-k,3);
+      el.textContent=p+Math.round(to*k).toLocaleString('en-IN')+s;if(k<1)requestAnimationFrame(f);}
+    requestAnimationFrame(f);
+  }
+
+  var charts=[];
+  function drawCharts(){
+    if(!window.Chart)return;
+    charts.forEach(function(c){c.destroy();});charts=[];
+    var accent=css('--accent'),muted=css('--muted'),line=css('--line'),text=css('--text');
+    Chart.defaults.font.family='Inter, system-ui, sans-serif';Chart.defaults.color=muted;
+    charts.push(new Chart(document.getElementById('bookChart'),{
+      type:'bar',
+      data:{labels:['Apr 2026 · 13K partners','Oct 2026 · same book','Now · 17K-partner book'],
+        datasets:[{data:[50,55,80],backgroundColor:[muted+'55',muted+'88',accent],borderRadius:10,barPercentage:.6}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return '₹'+c.raw+' Cr a month';}}}},
+        scales:{y:{beginAtZero:true,grid:{color:line},border:{display:false},ticks:{callback:function(v){return '₹'+v+' Cr';}}},x:{grid:{display:false},ticks:{color:text,font:{weight:'600'}}}},
+        animation:{duration:1200,easing:'easeOutQuart'}},
+      plugins:[{id:'labels',afterDatasetsDraw:function(ch){var ctx=ch.ctx;ctx.save();ctx.fillStyle=text;ctx.font='700 14px Inter';ctx.textAlign='center';
+        ch.getDatasetMeta(0).data.forEach(function(b,i){ctx.fillText('₹'+ch.data.datasets[0].data[i]+' Cr',b.x,b.y-8);});ctx.restore();}}]
+    }));
+    var sp=document.getElementById('mockSpark');
+    charts.push(new Chart(sp,{type:'line',data:{labels:[1,2,3,4,5,6,7,8,9,10,11,12],datasets:[{data:[30,34,33,38,41,40,46,49,48,54,57,61],borderColor:accent,backgroundColor:accent+'22',fill:true,tension:.4,pointRadius:0,borderWidth:2}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},animation:{duration:1500}}}));
+  }
+  if(window.Chart)drawCharts();else window.addEventListener('load',drawCharts);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawCharts);
+})();
+</script>
+</body>
+</html>
