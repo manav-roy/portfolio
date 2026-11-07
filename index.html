@@ -141,6 +141,8 @@ section{padding:88px 0}
 .f-bar{height:38px;border-radius:10px;background:var(--accent);display:flex;align-items:center;padding:0 14px;color:#fff;font-weight:700;font-size:13.5px;white-space:nowrap;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
 :root[data-theme="dark"] .f-bar{color:#06201d}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .f-bar{color:#06201d}}
+.f-bar{min-width:fit-content;max-width:100%}
+@media (max-width:500px){.f-bar{white-space:normal;height:auto;min-height:38px;padding:8px 12px;min-width:0}.kpis{gap:5px}.kpi{padding:7px}.kpi small{font-size:10px}.mock-main{padding:10px}}
 .f-row small{color:var(--muted);font-size:12.5px}
 
 /* timeline */
@@ -659,10 +661,10 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
     Chart.defaults.font.family='Inter, system-ui, sans-serif';Chart.defaults.color=muted;
     charts.push(new Chart(document.getElementById('bookChart'),{
       type:'bar',
-      data:{labels:['Apr 2026 · 13K partners','Oct 2026 · same book','Now · 17K-partner book'],
+      data:{labels:[['Apr 2026','13K partners'],['Oct 2026','same book'],['Now','17K-partner book']],
         datasets:[{data:[50,55,80],backgroundColor:[muted+'55',muted+'88',accent],borderRadius:10,barPercentage:.6}]},
       options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return '₹'+c.raw+' Cr a month';}}}},
-        layout:{padding:{top:24}},scales:{y:{beginAtZero:true,suggestedMax:90,grid:{color:line},border:{display:false},ticks:{callback:function(v){return '₹'+v+' Cr';}}},x:{grid:{display:false},ticks:{color:text,font:{weight:'600'}}}},
+        layout:{padding:{top:24}},scales:{y:{beginAtZero:true,suggestedMax:90,grid:{color:line},border:{display:false},ticks:{callback:function(v){return '₹'+v+' Cr';}}},x:{grid:{display:false},ticks:{color:text,font:{weight:'600'},maxRotation:0,autoSkip:false}}},
         animation:{duration:1200,easing:'easeOutQuart'}},
       plugins:[{id:'labels',afterDatasetsDraw:function(ch){var ctx=ch.ctx;ctx.save();ctx.fillStyle=text;ctx.font='700 14px Inter';ctx.textAlign='center';
         ch.getDatasetMeta(0).data.forEach(function(b,i){ctx.fillText('₹'+ch.data.datasets[0].data[i]+' Cr',b.x,b.y-8);});ctx.restore();}}]
