@@ -97,20 +97,27 @@ section{padding:88px 0}
 .step:first-of-type{border-top:0}
 .step .i{flex:none;width:30px;height:30px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-weight:700;display:grid;place-items:center;font-size:13px}
 .step b{display:block;font-size:15px}
-.step span{color:var(--muted);font-size:14px}
+.step span{color:var(--muted);font-size:15px}
 
 /* impact */
 .impact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
 @media (max-width:860px){.impact-grid{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
 .card h3{font-size:18px}
-.card .sub{color:var(--muted);font-size:14px;margin-top:4px}
+.card .sub{color:var(--muted);font-size:15px;margin-top:4px}
 .chart-box{position:relative;height:300px;margin-top:18px}
-.par{display:grid;gap:12px}
+.par{display:grid;gap:12px;align-content:start}
+.case h3{font-size:clamp(20px,2.2vw,24px);margin:12px 0 6px}
+.case-step{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.case-step b{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.case-step p{color:var(--muted);font-size:15.5px}
+.case-step strong{color:var(--text)}
+.chart-box.mini{height:150px;margin:4px 0 8px}
+@media (max-width:560px){.case-step{grid-template-columns:1fr;gap:4px}}
 .par-item{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--surface-2)}
 .par-item .t{font-weight:700;font-size:15px;display:flex;justify-content:space-between;gap:10px}
 .par-item .t .r{color:var(--accent);white-space:nowrap}
-.par-flow{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:13.5px;color:var(--muted);margin-top:8px}
+.par-flow{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14.5px;color:var(--muted);margin-top:8px}
 .par-flow b{color:var(--text);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
 
 /* projects */
@@ -119,7 +126,7 @@ section{padding:88px 0}
 .proj h3{font-size:clamp(22px,2.6vw,28px);margin:8px 0 10px}
 .proj p{color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
-.chip{font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line)}
+.chip{font-size:13.5px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line)}
 .badge{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
 .note{font-size:12.5px;color:var(--muted);margin-top:10px}
 /* mock UI */
@@ -181,16 +188,6 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
 
 .mailline{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:var(--muted);font-weight:500;font-size:15px;border-bottom:1px dashed var(--line);padding-bottom:2px}
 .mailline:hover{color:var(--accent);border-color:var(--accent)}
-/* lenses */
-.lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media (max-width:860px){.lenses{grid-template-columns:1fr}}
-.lens{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.lens .ic{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:14px}
-.lens h3{font-size:20px}
-.lens .q{color:var(--muted);font-size:14.5px;margin:6px 0 14px;font-style:italic}
-.lens ul{list-style:none;display:grid;gap:10px}
-.lens li{font-size:14.5px;padding-left:18px;position:relative;color:var(--text)}
-.lens li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
 /* experience */
 .xp{display:grid;gap:24px}
 .xp-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
@@ -208,7 +205,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
 .lt.s{background:var(--accent-soft);color:var(--accent)}
 .lt.p{background:color-mix(in srgb,#6366f1 14%,transparent);color:#6366f1}
 .lt.sa{background:color-mix(in srgb,var(--warm) 14%,transparent);color:var(--warm)}
-.xp-item p{color:var(--muted);font-size:14.5px}
+.xp-item p{color:var(--muted);font-size:15.5px}
 .xp-item p em{font-style:normal;color:var(--text);font-weight:600}
 
 .hero h1{font-size:clamp(34px,4.6vw,56px)}
@@ -245,7 +242,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
 .hub::after{content:"";position:absolute;inset:8% auto 8% 50%;width:2px;background:var(--line)}
 .node{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:var(--shadow);min-height:150px}
 .node .fn{font-weight:800;font-size:15px}
-.node .what{color:var(--muted);font-size:14px;margin:6px 0 10px}
+.node .what{color:var(--muted);font-size:15px;margin:6px 0 10px}
 .node .res{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:5px 10px;border-radius:8px}
 .core{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;background:var(--accent);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:14px;line-height:1.2;box-shadow:0 0 0 8px var(--bg),var(--shadow)}
 .core small{font-weight:500;opacity:.85;font-size:11px;margin-top:4px}
@@ -293,6 +290,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
       </div>
       <div class="ctas">
         <a class="btn btn-primary" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn btn-ghost" href="assets/Manav_Roy_CV.pdf" target="_blank" rel="noopener">Download CV</a>
         <a class="btn btn-ghost" href="#story">Read my story</a>
         <a class="btn btn-ghost" href="#work">See what I've built</a>
       </div>
@@ -346,7 +344,6 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
           <h3>Sharpening the edge</h3>
           <p>To learn the strategy behind the selling, I did a <b>PGDM in Marketing &amp; Strategy</b> at Goa Institute of Management. It sat right where my interests meet: how businesses grow, and a campus surrounded by the outdoors I love.</p>
           <p>There I was a finalist (12 of 1,200) at the IIT Roorkee case competition, a D.E. Shaw Fin Quest Fellow (1 of 14), and built a go-to-market plan for <b>Havells</b> from 410 retail outlets and 100 customer interviews.</p>
-          <figure class="ch-photo"><img src="assets/gim.jpg" alt="Manav at the Goa Institute of Management campus sign" loading="lazy"></figure>
         </div>
       </article>
       <article class="chapter reveal">
@@ -361,14 +358,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
             <li><b>Solve priority partners' problems</b>: 1,000+ cases closed, 500 partners back in business.</li>
             <li><b>Spotted that sales had no visibility</b> into partner health, and built the dashboard 800+ of them now use daily.</li>
           </ul>
-        </div>
-      </article>
-      <article class="chapter reveal">
-        <div class="ch-n">04</div>
-        <div class="ch-body">
-          <div class="ch-when">Always · Builder</div>
-          <h3>Building the fix, not just the slide</h3>
-          <p>When a problem keeps coming back, I build the tool that removes it, using Claude Code, GitHub and Vercel. Two of them run every day: <a href="#work" class="inl">Shikhar</a>, the sales team's partner dashboard, and <a href="#work" class="inl">Pipeline Desk</a>, my AI job-search system.</p>
+          <p style="margin-top:12px">That last one is how I like to work: when a problem keeps coming back, I build the tool that removes it, not just the slide that describes it.</p>
         </div>
       </article>
     </div>
@@ -401,80 +391,40 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
   </div>
 </section>
 
-<section id="lenses">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker">Three lenses I work with</div>
-      <h2>Sales instinct, strategic structure, product thinking.</h2>
-      <p>I think like a seller about the customer, like a strategist about where the money moves, and like a product manager about what to build.</p>
-    </div>
-    <div class="lenses">
-      <div class="lens reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 12l3-3 3 3 4-4"/></svg></div>
-        <h3>Product thinking</h3>
-        <div class="q">"What is the user really struggling with, and what is the smallest thing that fixes it?"</div>
-        <ul>
-          <li>Built Shikhar from a field problem: no live view of partners for 1,500 salespeople</li>
-          <li>Measured success by adoption: 800+ daily users, rated 4/5</li>
-          <li>Built Pipeline Desk end to end: scrapers, scoring, Gmail sync, scheduled agents</li>
-          <li>Iterated with real users: added multi-user logins and a follow-up sprint</li>
-        </ul>
-      </div>
-      <div class="lens reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
-        <h3>Strategy</h3>
-        <div class="q">"Where does the money actually move, and what lever moves it most?"</div>
-        <ul>
-          <li>Cleaned a 3.2-lakh partner database and segmented 10K active partners by potential</li>
-          <li>Redesigned the payout grid by product line: +3% month-on-month business</li>
-          <li>Priced a revival contest at 1% cost against a 3% margin: ₹90L in a week</li>
-          <li>Built Havells' BLDC-fan GTM plan from 410 outlets and 100 customer interviews</li>
-        </ul>
-      </div>
-      <div class="lens reveal">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
-        <h3>Sales</h3>
-        <div class="q">"People buy when they feel understood, not when they are pitched at."</div>
-        <ul>
-          <li>Closed ₹1 Cr across 100+ deals at Jaro Education; 115% of annual target</li>
-          <li>National "Sales Striker" award and "Champ of the Month" twice</li>
-          <li>Won back 120 lapsed high-potential partners: +₹1.2 Cr a month</li>
-          <li>Hosted 110 top partners on trips to Thailand and Goa: +10% growth after</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="impact" style="background:var(--surface-2)">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="kicker">Impact</div>
       <h2>Problem → action → result.</h2>
-      <p>A few things I've shipped at InsuranceDekho since April 2026.</p>
+      <p>One problem in depth, and four more in brief, from InsuranceDekho since April 2026.</p>
     </div>
     <div class="impact-grid">
-      <div class="card reveal">
-        <h3>Book growth: ₹50 Cr → ₹55 Cr a month in six months</h3>
-        <div class="sub">Monthly business on my portfolio, ₹ crore. Then handed the larger, 17,000-partner book.</div>
-        <div class="chart-box"><canvas id="bookChart" aria-label="Monthly business on my portfolio grew from 50 to 55 crore rupees, then the larger book at 80 crore" role="img"></canvas></div>
-      </div>
+      <article class="card case reveal">
+        <span class="badge">Case study</span>
+        <h3>Reviving 10,000 inactive partners without giving away margin</h3>
+        <div class="case-step"><b>Situation</b><p>In one month, 10,000 partners in the book stopped writing business. Each one was a relationship the sales team had already paid to build.</p></div>
+        <div class="case-step"><b>The question</b><p>An incentive could bring them back, but a badly priced one just pays partners for business that would have come anyway. How much could we spend and still come out ahead?</p></div>
+        <div class="case-step"><b>Decision</b><p>I priced the contest against margin, not volume: it could cost at most 1% of the business it brought in, against a 3% margin. I kept it to one week so it stayed focused.</p></div>
+        <div class="chart-box mini"><canvas id="caseChart" role="img" aria-label="For every 100 rupees of contest business: 3 rupees margin, 1 rupee contest cost, 2 rupees kept"></canvas></div>
+        <div class="case-step"><b>Result</b><p><strong>&#8377;90L of business in that one week</strong>, with the contest paying for itself several times over.</p></div>
+        <div class="case-step"><b>What I took from it</b><p>An incentive is a pricing decision. Start from the margin, then design the contest.</p></div>
+      </article>
       <div class="par reveal">
         <div class="par-item">
-          <div class="t">Partner win-back <span class="r">+₹1.2 Cr/month</span></div>
-          <div class="par-flow"><b>Problem</b><span>High-potential partners had quietly lapsed.</span><b>Action</b><span>Identified and won back 120 of them.</span><b>Result</b><span>₹1.2 Cr a month back in the book.</span></div>
+          <div class="t">Book growth <span class="r">+10% in 6 months</span></div>
+          <div class="par-flow"><b>Problem</b><span>A 13,000-partner book stuck at &#8377;50 Cr a month.</span><b>Action</b><span>Fixed on-ground pain points; improved partner rates and margins.</span><b>Result</b><span>&#8377;55 Cr a month in six months; then handed the 17,000-partner, &#8377;80 Cr book.</span></div>
         </div>
         <div class="par-item">
-          <div class="t">Issue resolution <span class="r">+₹40L/month</span></div>
+          <div class="t">Partner win-back <span class="r">+&#8377;1.2 Cr/month</span></div>
+          <div class="par-flow"><b>Problem</b><span>High-potential partners had quietly lapsed.</span><b>Action</b><span>Identified and won back 120 of them.</span><b>Result</b><span>&#8377;1.2 Cr a month back in the book.</span></div>
+        </div>
+        <div class="par-item">
+          <div class="t">Issue resolution <span class="r">+&#8377;40L/month</span></div>
           <div class="par-flow"><b>Problem</b><span>500 partners stopped over unresolved issues.</span><b>Action</b><span>Built cross-functional issue routing; 1,000+ issues closed.</span><b>Result</b><span>All 500 partners revived.</span></div>
         </div>
         <div class="par-item">
           <div class="t">Payout redesign <span class="r">+3% MoM</span></div>
           <div class="par-flow"><b>Problem</b><span>Flat payouts didn't reward partners' best product lines.</span><b>Action</b><span>Restructured the grid by product line; led insurer rate talks.</span><b>Result</b><span>+3% month-on-month incremental business.</span></div>
-        </div>
-        <div class="par-item">
-          <div class="t">Revival contest <span class="r">₹90L in a week</span></div>
-          <div class="par-flow"><b>Problem</b><span>10,000 partners inactive in a month.</span><b>Action</b><span>One-week contest costing 1% against a 3% margin.</span><b>Result</b><span>₹90L of business that week.</span></div>
         </div>
       </div>
     </div>
@@ -484,8 +434,8 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
 <section id="experience">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="kicker">Experience in depth</div>
-      <h2>What I did, and what changed because of it.</h2>
+      <div class="kicker">More from my roles</div>
+      <h2>The rest of the record.</h2>
       <p>Each point is tagged by the lens it uses most: <span class="lt sa">Sales</span> <span class="lt s">Strategy</span> <span class="lt p">Product</span></p>
     </div>
     <div class="xp">
@@ -493,20 +443,14 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
         <div class="xp-head"><div><h3>Sales Strategy</h3><div class="org">InsuranceDekho · Gurugram · B2B insurance partners</div></div><div class="when">Apr 2026 – Present</div></div>
         <div class="xp-list">
           <div class="xp-item"><div class="top"><b>Grew the book</b><span class="lt s">Strategy</span></div><p>Fixed on-ground partner and sales pain points and improved partner rates and margins. Grew a 13,000-partner book from <em>₹50 Cr to ₹55 Cr a month</em> in six months, then took over the 17,000-partner, ₹80 Cr book.</p></div>
-          <div class="xp-item"><div class="top"><b>Built the partner dashboard</b><span class="lt p">Product</span></div><p>1,500 salespeople had no live view of partner health. Built an AI-assisted dashboard and automated recurring reports and the 5-zone townhall deck: <em>800+ daily users, rated 4/5</em>.</p></div>
           <div class="xp-item"><div class="top"><b>Segmented the partner base</b><span class="lt s">Strategy</span></div><p>Cleaned a 3.2-lakh partner database (1.28 lakh inactive) and grouped 10K active partners by potential, premium and growth. Focused effort on them: <em>+4% business</em>.</p></div>
-          <div class="xp-item"><div class="top"><b>Redesigned partner payouts</b><span class="lt s">Strategy</span></div><p>Flat payouts didn't reward partners' best product lines. Restructured the grid by product line and led insurer rate talks: <em>+3% month-on-month</em> on the ₹80 Cr book.</p></div>
           <div class="xp-item"><div class="top"><b>Trained the sales force</b><span class="lt p">Product</span></div><p>Research showed skill gaps, so I built <em>15 AI-assisted training modules</em> for all 1,500 sales staff, backed by weekly success stories: +15% incentive earnings for 125 salespeople.</p></div>
-          <div class="xp-item"><div class="top"><b>Won back lapsed partners</b><span class="lt sa">Sales</span></div><p>Ran a one-week revival contest for 10,000 inactive partners (<em>₹90L that week</em>) and won back 120 lapsed high-potential partners, adding ₹1.2 Cr a month.</p></div>
-          <div class="xp-item"><div class="top"><b>Fixed what blocked partners</b><span class="lt p">Product</span></div><p>Set up a cross-functional issue-routing structure that closed <em>1,000+ issues</em> and revived 500 partners who had stopped doing business: +₹40L a month.</p></div>
           <div class="xp-item"><div class="top"><b>Led senior stakeholders</b><span class="lt sa">Sales</span></div><p>Own monthly reporting for <em>70+ state and regional sales heads</em> across 27 states and two entities. Hosted 110 top partners in Thailand and Goa (₹70L budget): +10% growth after.</p></div>
         </div>
       </div>
       <div class="xp-card reveal">
         <div class="xp-head"><div><h3>Senior Business Development Associate</h3><div class="org">Jaro Education · Gurugram · online MBA programmes</div></div><div class="when">Jun 2022 – Jun 2023</div></div>
         <div class="xp-list">
-          <div class="xp-item"><div class="top"><b>Turned around a zero start</b><span class="lt sa">Sales</span></div><p>Zero sales in my first two months. Spoke to <em>30,000+ prospects</em> that year, with 99.5% saying no, and finished among the branch's top performers.</p></div>
-          <div class="xp-item"><div class="top"><b>Consultative selling</b><span class="lt sa">Sales</span></div><p>Sold ₹1 lakh+ online MBA programmes to working professionals through consultative selling: <em>100+ deals worth ₹1 Cr</em>.</p></div>
           <div class="xp-item"><div class="top"><b>Set a team benchmark</b><span class="lt sa">Sales</span></div><p>Peaked at <em>23 enrolments in a month</em>, a benchmark for the team.</p></div>
           <div class="xp-item"><div class="top"><b>Made the deal affordable</b><span class="lt s">Strategy</span></div><p>Used loans from partner NBFCs to take price out of the way: <em>₹70L of my sales</em> were financed that way.</p></div>
           <div class="xp-item"><div class="top"><b>Beat target every quarter</b><span class="lt sa">Sales</span></div><p><em>115% of annual target</em> with 100% quarterly attainment; a top performer in the Gurugram branch.</p></div>
@@ -616,6 +560,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <a class="btn" href="https://www.linkedin.com/in/manav-roy-3a87341a2" target="_blank" rel="noopener">Connect on LinkedIn</a>
         <a class="btn alt" href="mailto:manav.ficabsec@gmail.com">Email me</a>
+        <a class="btn alt" href="assets/Manav_Roy_CV.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
       <p style="margin:22px auto 0;font-size:16px;opacity:1"><a href="mailto:manav.ficabsec@gmail.com" style="font-weight:700;border-bottom:1px solid currentColor">manav.ficabsec@gmail.com</a></p>
     </div>
@@ -662,15 +607,15 @@ footer{padding:36px 0;color:var(--muted);font-size:13.5px;text-align:center}
     charts.forEach(function(c){c.destroy();});charts=[];
     var accent=css('--accent'),muted=css('--muted'),line=css('--line'),text=css('--text');
     Chart.defaults.font.family='Inter, system-ui, sans-serif';Chart.defaults.color=muted;
-    charts.push(new Chart(document.getElementById('bookChart'),{
+    charts.push(new Chart(document.getElementById('caseChart'),{
       type:'bar',
-      data:{labels:[['Apr 2026','13K partners'],['Oct 2026','same book'],['Now','17K-partner book']],
-        datasets:[{data:[50,55,80],backgroundColor:[muted+'55',muted+'88',accent],borderRadius:10,barPercentage:.6}]},
-      options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return '₹'+c.raw+' Cr a month';}}}},
-        layout:{padding:{top:24}},scales:{y:{beginAtZero:true,suggestedMax:90,grid:{color:line},border:{display:false},ticks:{callback:function(v){return '₹'+v+' Cr';}}},x:{grid:{display:false},ticks:{color:text,font:{weight:'600'},maxRotation:0,autoSkip:false}}},
+      data:{labels:['Margin earned','Contest cost','Kept'],datasets:[{data:[3,1,2],backgroundColor:[muted+'88',css('--warm')||'#d97706',accent],borderRadius:8,barPercentage:.7}]},
+      options:{indexAxis:'y',maintainAspectRatio:false,layout:{padding:{right:40}},
+        plugins:{legend:{display:false},title:{display:true,text:'Per \u20b9100 of contest business',align:'start',color:text,font:{weight:'600',size:13}},tooltip:{callbacks:{label:function(c){return '\u20b9'+c.raw;}}}},
+        scales:{x:{display:false,beginAtZero:true,max:3.4},y:{grid:{display:false},border:{display:false},ticks:{color:text,font:{weight:'600'}}}},
         animation:{duration:1200,easing:'easeOutQuart'}},
-      plugins:[{id:'labels',afterDatasetsDraw:function(ch){var ctx=ch.ctx;ctx.save();ctx.fillStyle=text;ctx.font='700 14px Inter';ctx.textAlign='center';
-        ch.getDatasetMeta(0).data.forEach(function(b,i){ctx.fillText('₹'+ch.data.datasets[0].data[i]+' Cr',b.x,b.y-8);});ctx.restore();}}]
+      plugins:[{id:'vals',afterDatasetsDraw:function(ch){var ctx=ch.ctx;ctx.save();ctx.fillStyle=text;ctx.font='700 13px Inter';ctx.textBaseline='middle';
+        ch.getDatasetMeta(0).data.forEach(function(b,i){ctx.fillText('\u20b9'+ch.data.datasets[0].data[i],b.x+8,b.y);});ctx.restore();}}]
     }));
     var sp=document.getElementById('mockSpark');
     charts.push(new Chart(sp,{type:'line',data:{labels:[1,2,3,4,5,6,7,8,9,10,11,12],datasets:[{data:[30,34,33,38,41,40,46,49,48,54,57,61],borderColor:accent,backgroundColor:accent+'22',fill:true,tension:.4,pointRadius:0,borderWidth:2}]},
